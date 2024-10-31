@@ -1,0 +1,38 @@
+.carouselContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.carouselItem {
+    width: 200px; /* Largura padrão para os carrosséis laterais */
+    height: 100px; /* Altura padrão para os carrosséis laterais */
+    background-color: lightgray; /* Cor de fundo */
+    display: flex;
+    flex-direction: column; /* Para empilhar imagem e título */
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.carouselItemCenter {
+    width: 100px; /* Metade da largura dos carrosséis laterais */
+    height: 200px; /* Altura dobrada para o carrossel central */
+    background-color: darkgray; /* Cor de fundo diferente para destacar */
+    display: flex;
+    flex-direction: column; /* Para empilhar imagem e título */
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.carouselImage {
+    max-width: 100%; /* Ajusta a imagem para caber no carrossel */
+    max-height: 70%; /* Limita a altura da imagem */
+    object-fit: cover; /* Corta a imagem para se ajustar ao contêiner */
+}
+
+h3 {
+    margin-top: 5px; /* Espaçamento entre a imagem e o título */
+}

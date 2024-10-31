@@ -1,0 +1,18 @@
+.contactContainer {
+    padding: 20px;
+    text-align: center; /* Centraliza o texto */
+}
+
+.contactInfo {
+    margin-top: 20px;
+    font-weight: bold; /* Aumenta o peso da fonte */
+}
+
+.contactInfo h2 {
+    margin: 10px 0; /* Adiciona espaço acima e abaixo de cada h2 */
+}
+
+img {
+    max-width: 100%; 
+    height: auto; 
+}

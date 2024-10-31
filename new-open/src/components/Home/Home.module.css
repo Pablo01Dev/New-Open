@@ -1,0 +1,31 @@
+/* Estilizando o contêiner principal */
+.container {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #f8f9fa; /* Cor de fundo clara */
+}
+
+/* Estilo para a imagem do logo */
+img {
+    max-width: 100%; /* Garante que a imagem não exceda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+}
+
+/* Estilo para o título */
+h1 {
+    font-size: 2.5rem; /* Tamanho da fonte para o título */
+    color: #343a40; /* Cor do texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo para a imagem do drink */
+img {
+    max-width: 100%; /* Garante que a imagem do drink não exceda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas para a imagem do drink */
+}

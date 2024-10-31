@@ -1,0 +1,35 @@
+/* Estilo para o contêiner principal do componente QuemSomos */
+.quemSomosContainer {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #ffffff; /* Cor de fundo branca */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    margin: 20px; /* Margem externa */
+}
+
+/* Estilo para o título */
+.quemSomosContainer h2 {
+    font-size: 24px; /* Tamanho da fonte do título */
+    color: #333333; /* Cor do texto */
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo para o parágrafo */
+.quemSomosContainer p {
+    font-size: 16px; /* Tamanho da fonte do parágrafo */
+    color: #555555; /* Cor do texto */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    max-width: 600px; /* Largura máxima do parágrafo */
+    margin: 0 auto; /* Centraliza o parágrafo */
+}
+
+/* Estilo para o carrossel */
+.carrossel {
+    width: 100%; /* Largura do carrossel */
+    margin-top: 20px; /* Margem superior do carrossel */
+}

@@ -1,0 +1,43 @@
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+}
+
+.drink {
+    position: relative;
+    min-width: 200px;
+    max-width: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    transition: transform 0.3s;
+}
+
+.drink:hover {
+    transform: scale(1.05);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.titleBackground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 192, 203, 0.8); /* Fundo rosa */
+    text-align: center;
+    padding: 10px;
+}
+
+.title {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+}
