@@ -1,8 +1,9 @@
 import React from "react";
-import styles from './Carousel.module.css';
-import carouselData from '../src/data'; // Ajuste o caminho conforme necessário
+import styles from './CarouselConteiner.module.css';
+import carouselData from '../../../data';
+n
 
-function Carousel() {
+function CarouselConteiner() {
     return (
         <div className={styles.carouselContainer}>
             {carouselData.map((item, index) => (
@@ -18,4 +19,4 @@ function Carousel() {
     );
 }
 
-export default Carousel;
+export default CarouselConteiner;

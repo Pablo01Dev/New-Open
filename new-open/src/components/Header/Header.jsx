@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import styles from '../styles/Header.module.css';
-import siteLogo from '../assets/images/logo.svg';
+import styles from './Header.module.css';
 
 function Header() {
     console.log('Header renderizado');
@@ -9,7 +8,7 @@ function Header() {
         <div className={styles.container}>
             <div className={styles.contentWrapper}>
                 <div className={styles.imageContainer}>
-                    <img src={siteLogo} alt="andarilo" />
+                    <img src="" alt="andarilo" />
                 </div>
 
                 <div className={styles.lineAnimate}>

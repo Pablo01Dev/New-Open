@@ -1,6 +1,6 @@
 import React from "react";
+import CarouselConteiner from './CarouselConteiner/CarouselConteiner.jsx'; // Caminho corrigido
 import styles from './QuemSomos.module.css'; // Importe o CSS aqui
-import CarrosselConteiner from './CarrosselConteiner.component';
 
 function QuemSomos() {
     return (
@@ -18,7 +18,7 @@ function QuemSomos() {
             </p>
 
             <div className={styles.carrossel}>
-                <CarrosselConteiner />
+                <CarouselConteiner />
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 import React from "react";
-import styles from './Drinks.module.css';
-import {drinks} from '../src/data.js';
+import styles from './DrinksCarousel.module.css';
+import {drinks} from "../../data";
 
 function DrinksCarousel() {
     return (

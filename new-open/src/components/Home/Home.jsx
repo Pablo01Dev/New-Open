@@ -1,14 +1,12 @@
 import React from "react";
-import styles from './Header.module.css';
-import logo from '../src/assets/react.svg';
-import drink from '../src/assets/drink.jpg'; // Certifique-se de importar a imagem do drink
+import styles from './Home.module.css';
 
 function Home() {
     return (
         <div className={styles.container}> {/* Adicione a classe container aqui */}
-            <img src={logo} alt="logo" />
+            <img src="" alt="logo" />
             <h1>Brindes únicos,<br />Eventos inesquecíveis</h1>
-            <img src={drink} alt="drink" />
+            <img src="" alt="drink" />
         </div>
     );  
 }

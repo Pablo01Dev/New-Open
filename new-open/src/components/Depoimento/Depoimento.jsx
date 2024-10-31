@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './Depoimento.module.css';
-import {testimonials} from '../src/data';
+import {testimonials} from "../../data";
 
 function Depoimento() {
     return (
