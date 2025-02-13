@@ -1,7 +1,6 @@
 import React from "react";
 import styles from './CarouselConteiner.module.css';
-import carouselData from '../../../data';
-n
+import { carouselData } from '../../../data';
 
 function CarouselConteiner() {
     return (

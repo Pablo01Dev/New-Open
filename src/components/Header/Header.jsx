@@ -10,11 +10,6 @@ function Header() {
                 <div className={styles.imageContainer}>
                     <img src="" alt="andarilo" />
                 </div>
-
-                <div className={styles.lineAnimate}>
-                    <img src={lineAnimate} alt="linha animada" />
-                </div>
-
                 <div className={styles.textContainer}>
                     <header>
                         <div className={styles.fontLogo}>
