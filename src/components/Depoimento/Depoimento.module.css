@@ -1,15 +1,91 @@
+/* Estilos para o contêiner do carrossel */
+.carouselContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Esconde os itens fora da área visível */
+    margin: 20px;
+}
 
+/* Estilos para o carrossel */
 .carousel {
     display: flex;
-    overflow-x: auto;
-    gap: 20px;
+    transition: transform 0.5s ease;
 }
 
+/* Estilo individual para cada depoimento */
 .testimonial {
-    min-width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
     background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    width: 30%; /* No desktop, cada depoimento ocupa 30% da largura */
+    max-width: 600px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
-    
+
+/* Estilo para o nome do depoente */
+.testimonial h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estilo para o texto do depoimento */
+.testimonial p {
+    font-size: 1.125rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Estilo para o evento */
+.testimonial span {
+    display: block;
+    font-size: 1rem;
+    color: #888;
+    font-style: italic;
+}
+
+/* Botões de navegação */
+.prevButton, .nextButton {
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    padding: 0.5em;
+    transition: 0.3s ease;
+}
+
+.prevButton {
+    left: 10px;
+}
+
+.nextButton {
+    right: 10px;
+}
+
+/* Efeito de hover nos botões */
+.prevButton:hover, .nextButton:hover {
+    color: #333;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .testimonial {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .prevButton, .nextButton {
+        font-size: 1.5rem;
+    }
+}

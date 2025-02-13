@@ -1,10 +1,17 @@
+.carouselContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
 .carousel {
     display: flex;
-    overflow-x: auto;
     gap: 20px;
     padding: 20px;
     scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scroll-behavior: smooth;
 }
 
 .drink {
@@ -40,4 +47,49 @@
     font-size: 1.2rem;
     color: #333;
     margin: 0;
+}
+
+.arrowButton {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding: 10px;
+}
+
+.arrowButton:hover {
+    color: #646cff;
+}
+
+.arrowButton:focus {
+    outline: none;
+}
+
+.arrowButton:first-child {
+    left: 10px;
+}
+
+.arrowButton:last-child {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .drink {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .image {
+        height: 150px;
+    }
 }

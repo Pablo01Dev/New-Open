@@ -2,12 +2,17 @@ export const testimonials = [
     { id: 1, nome: "João Silva", depoimento: "Excelente experiência!", evento: "Festa de Aniversário" },
     { id: 2, nome: "Maria Oliveira", depoimento: "Maravilhoso evento!", evento: "Casamento" },
     { id: 3, nome: "Carlos Souza", depoimento: "Muito bem organizado!", evento: "Conferência" },
+    { id: 4, nome: "Carlos Souza", depoimento: "Muito bem organizado!", evento: "Conferência" },
+    { id: 5, nome: "Carlos Souza", depoimento: "Muito bem organizado!", evento: "Conferência" },
 ];
 
 export const drinks = [
     { id: 1, titulo: "Mojito", imagem: "https://source.unsplash.com/300x200/?mojito" },
     { id: 2, titulo: "Caipirinha", imagem: "https://source.unsplash.com/300x200/?caipirinha" },
     { id: 3, titulo: "Piña Colada", imagem: "https://source.unsplash.com/300x200/?pina-colada" },
+    { id: 4, titulo: "Mojito", imagem: "https://source.unsplash.com/300x200/?mojito" },
+    { id: 5, titulo: "Caipirinha", imagem: "https://source.unsplash.com/300x200/?caipirinha" },
+    { id: 6, titulo: "Piña Colada", imagem: "https://source.unsplash.com/300x200/?pina-colada" },
 ];
 
 export const carouselData = [

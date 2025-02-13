@@ -1,31 +1,33 @@
-/* Estilizando o contêiner principal */
+/* Home.module.css */
 .container {
     display: flex;
-    flex-direction: column; /* Alinha os elementos verticalmente */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens verticalmente */
-    text-align: center; /* Centraliza o texto */
-    padding: 20px; /* Espaçamento interno */
-    background-color: #f8f9fa; /* Cor de fundo clara */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--container-color);
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 auto;
 }
 
-/* Estilo para a imagem do logo */
-img {
-    max-width: 100%; /* Garante que a imagem não exceda a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+.container img {
+    width: 100%;
+    max-width: 500px; /* Limita o tamanho máximo da imagem */
+    margin: 10px 0;
 }
 
-/* Estilo para o título */
 h1 {
-    font-size: 2.5rem; /* Tamanho da fonte para o título */
-    color: #343a40; /* Cor do texto */
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    margin: 20px 0;
+    line-height: 1.3;
+    font-family: var(--body-font);
 }
 
-/* Estilo para a imagem do drink */
-img {
-    max-width: 100%; /* Garante que a imagem do drink não exceda a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 8px; /* Bordas arredondadas para a imagem do drink */
+h1 br {
+    display: block;
+    margin: 10px 0;
 }

@@ -1,160 +1,56 @@
+/* .container e .navContainer */
 .container {
-    background-color: var(--fundo-claro);
-    justify-content: center;
-  }
-  
-  .textContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    order: 1;
-  }
-  
-  .navContainer {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .fontLogo h1 {
-    text-align: center;
-    font-family: Kanit, sans-serif;
-    font-weight: 500;
-    font-size: 4em;
-    margin: 0;
-    padding: 0;
-    animation: fade-in 1.5s;
-  }
-  
-  .fontLogo h2 {
-    text-align: center;
-    font-family: Kanit, sans-serif;
-    font-weight: 500;
-    font-size: 2em;
-    margin: -15px 0 0 0;
-    animation: fade-in 1.5s;
-  }
-  
-  
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-  
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .imageContainer {
-  
-    display: flex;
-    justify-content: center;
-  
-  }
-  
-  .imageContainer img {
-    max-width: 8em;
-    margin: 2em auto -10em;
-    display: flex;
-    z-index: 1;
-    opacity: 0;
-    animation: fade-in 1.3s ease-in 0.3s forwards;
-  }
-  
-  .lineAnimate {
-    width: 100%;
-    opacity: 0;
-    animation: fade-in 1.3s ease-in 0.5s forwards;
-  }
-  
-  .lineAnimate img {
-    width: 100%;
-    max-width: 100%;
-    height: 150px;
-    object-fit: cover;
-    margin: auto 0;
-  
-  
-  }
-  
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .header p {
-    font-size: 1.2em;
-    font-weight: 800;
-    margin: 5em 0 1em 0;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1em 1.2em;
-    opacity: 0;
-    animation: fade-in 1s ease-in 1s forwards;
-  }
-  
-  nav button {
-    cursor: pointer;
-    margin: 0px 5px;
-    font-size: 1em;
-    font-weight: 600;
-    border: 0;
-    padding: 1em 1em 1em 1em;
-    border-radius: 6px;
-    background-color: var(--cinza);
-  }
-  
-  @media (min-width: 1024px) {
-    .container {
-      margin: 8em auto 4em auto;
-      max-width: 100%;
-    }
-  
-    .contentWrapper {
-      display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box; /* Garante que o padding não ultrapasse a largura */
+}
+
+.logo img {
+  height: 50px;
+}
+
+.navContainer nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navContainer button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: 0.3s ease;
+}
+
+.navContainer button:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .container {
       flex-direction: column;
       align-items: center;
-    }
-  
-  
-    .imageContainer {
-      order: 3;
-      margin-top: 1em;
-    }
-  
-    .lineAnimate {
-      order: 4;
-    }
-  
-    .lineAnimate img {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      animation: fade-in 1s;
-    }
-  
-    .navContainer {
-      order: 2;
-      width: 100%;
-      margin: 4em 0;
-  
-    }
+      padding: 15px;
   }
-  
-  @media (min-width: 360px) {
-    nav button {  
-      font-size: .9em;
-    
-    }
+
+  .navContainer nav {
+      flex-direction: column;
+      gap: 10px;
   }
+
+  .navContainer button {
+      padding: 8px 12px; /* Ajuste o padding para dispositivos móveis */
+  }
+}

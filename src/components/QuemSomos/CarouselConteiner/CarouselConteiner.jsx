@@ -5,15 +5,31 @@ import { carouselData } from '../../../data';
 function CarouselConteiner() {
     return (
         <div className={styles.carouselContainer}>
-            {carouselData.map((item, index) => (
-                <div
-                    key={item.id}
-                    className={index === 2 ? styles.carouselItemCenter : styles.carouselItem}
-                >
-                    <img src={item.image} alt={item.title} className={styles.carouselImage} />
-                    <h3>{item.title}</h3>
-                </div>
-            ))}
+            {/* Coluna da esquerda */}
+            <div className={styles.carouselLeftRight}>
+                {carouselData.slice(0, 2).map((item) => (
+                    <div key={item.id} className={styles.carouselItem}>
+                        <img src={item.image} alt={item.title} className={styles.carouselImage} />
+                        <h3>{item.title}</h3>
+                    </div>
+                ))}
+            </div>
+
+            {/* Carrossel central */}
+            <div className={styles.carouselItemCenter}>
+                <img src={carouselData[2].image} alt={carouselData[2].title} className={styles.carouselImage} />
+                <h3>{carouselData[2].title}</h3>
+            </div>
+
+            {/* Coluna da direita */}
+            <div className={styles.carouselLeftRight}>
+                {carouselData.slice(3, 5).map((item) => (
+                    <div key={item.id} className={styles.carouselItem}>
+                        <img src={item.image} alt={item.title} className={styles.carouselImage} />
+                        <h3>{item.title}</h3>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
