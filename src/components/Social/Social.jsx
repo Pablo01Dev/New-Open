@@ -9,14 +9,15 @@ function Social() {
                 Fique por dentro do que acontece na new open bar®, siga-nos nas redes sociais.
                 Curta e compartilhe, seu evento pode ser o próximo.
             </p>
-
-            <div className={styles.socialIcons}> {/* Adicione a classe socialIcons aqui */}
-                <a href="https://www.facebook.com/newopenbar/" target="_blank" rel="noopener noreferrer">
-                    <i className="bi bi-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/newopenbar/" target="_blank" rel="noopener noreferrer">
-                    <i className="bi bi-instagram"></i>
-                </a>
+            <div>
+                <div className={styles.socialIcons}> {/* Adicione a classe socialIcons aqui */}
+                    <a href="https://www.facebook.com/newopenbar/" target="_blank" rel="noopener noreferrer">
+                        <i className="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/newopenbar/" target="_blank" rel="noopener noreferrer">
+                        <i className="bi bi-instagram"></i>
+                    </a>
+                </div>
             </div>
 
             <img src="" alt="" />
