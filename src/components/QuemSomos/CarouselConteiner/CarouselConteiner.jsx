@@ -10,7 +10,6 @@ function CarouselConteiner() {
                 {carouselData.slice(0, 2).map((item) => (
                     <div key={item.id} className={styles.carouselItem}>
                         <img src={item.image} alt={item.title} className={styles.carouselImage} />
-                        <h3>{item.title}</h3>
                     </div>
                 ))}
             </div>
@@ -18,7 +17,6 @@ function CarouselConteiner() {
             {/* Carrossel central */}
             <div className={styles.carouselItemCenter}>
                 <img src={carouselData[2].image} alt={carouselData[2].title} className={styles.carouselImage} />
-                <h3>{carouselData[2].title}</h3>
             </div>
 
             {/* Coluna da direita */}
@@ -26,7 +24,6 @@ function CarouselConteiner() {
                 {carouselData.slice(3, 5).map((item) => (
                     <div key={item.id} className={styles.carouselItem}>
                         <img src={item.image} alt={item.title} className={styles.carouselImage} />
-                        <h3>{item.title}</h3>
                     </div>
                 ))}
             </div>

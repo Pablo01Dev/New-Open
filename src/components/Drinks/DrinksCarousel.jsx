@@ -19,8 +19,8 @@ function DrinksCarousel() {
     };
 
     return (
-        <div>
-            <h1>OS DRINKS MAIS PEDIDOS</h1>
+        <div className={styles.drinksContainer}>
+            <h1 className={styles.titulo}>OS DRINKS MAIS PEDIDOS</h1>
             <div className={styles.carouselContainer}>
                 <button className={styles.arrowButton} onClick={prevSlide}>←</button>
                 <div className={styles.carousel}>

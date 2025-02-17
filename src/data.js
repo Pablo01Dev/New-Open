@@ -7,12 +7,12 @@ export const testimonials = [
 ];
 
 export const drinks = [
-    { id: 1, titulo: "Mojito", imagem: "https://source.unsplash.com/300x200/?mojito" },
-    { id: 2, titulo: "Caipirinha", imagem: "https://source.unsplash.com/300x200/?caipirinha" },
-    { id: 3, titulo: "Piña Colada", imagem: "https://source.unsplash.com/300x200/?pina-colada" },
-    { id: 4, titulo: "Mojito", imagem: "https://source.unsplash.com/300x200/?mojito" },
-    { id: 5, titulo: "Caipirinha", imagem: "https://source.unsplash.com/300x200/?caipirinha" },
-    { id: 6, titulo: "Piña Colada", imagem: "https://source.unsplash.com/300x200/?pina-colada" },
+    { id: 1, titulo: "Mojito", imagem: "https://www.estadao.com.br/resizer/v2/PSC5RAN7MNEWPOMZEGWJB4MUJY.jpg?quality=80&auth=4c8bd1b037e9cdb1ad8d3de68b224c41c62f6be9cfeb2ed63f8fdd968e0de85e&width=720&height=503&smart=true" },
+    { id: 2, titulo: "Caipirinha", imagem: "https://www.estadao.com.br/resizer/v2/PSC5RAN7MNEWPOMZEGWJB4MUJY.jpg?quality=80&auth=4c8bd1b037e9cdb1ad8d3de68b224c41c62f6be9cfeb2ed63f8fdd968e0de85e&width=720&height=503&smart=true" },
+    { id: 3, titulo: "Piña Colada", imagem: "https://www.estadao.com.br/resizer/v2/PSC5RAN7MNEWPOMZEGWJB4MUJY.jpg?quality=80&auth=4c8bd1b037e9cdb1ad8d3de68b224c41c62f6be9cfeb2ed63f8fdd968e0de85e&width=720&height=503&smart=true" },
+    { id: 4, titulo: "Mojito", imagem: "https://www.estadao.com.br/resizer/v2/PSC5RAN7MNEWPOMZEGWJB4MUJY.jpg?quality=80&auth=4c8bd1b037e9cdb1ad8d3de68b224c41c62f6be9cfeb2ed63f8fdd968e0de85e&width=720&height=503&smart=true" },
+    { id: 5, titulo: "Caipirinha", imagem: "https://www.estadao.com.br/resizer/v2/PSC5RAN7MNEWPOMZEGWJB4MUJY.jpg?quality=80&auth=4c8bd1b037e9cdb1ad8d3de68b224c41c62f6be9cfeb2ed63f8fdd968e0de85e&width=720&height=503&smart=true" },
+    { id: 6, titulo: "Piña Colada", imagem: "https://www.estadao.com.br/resizer/v2/PSC5RAN7MNEWPOMZEGWJB4MUJY.jpg?quality=80&auth=4c8bd1b037e9cdb1ad8d3de68b224c41c62f6be9cfeb2ed63f8fdd968e0de85e&width=720&height=503&smart=true" },
 ];
 
 export const carouselData = [

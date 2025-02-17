@@ -4,13 +4,16 @@ import styles from './Social.module.css';
 
 function Social() {
     return (
-        <div className={styles.socialContainer}> {/* Adicione a classe socialContainer aqui */}
+        <div className={styles.socialContainer}> 
             <p>
-                Fique por dentro do que acontece na new open bar®, siga-nos nas redes sociais.
+                Fique por dentro do que acontece na new open bar®,
+                <br/>
+                siga-nos nas redes sociais.
+                <br/>
                 Curta e compartilhe, seu evento pode ser o próximo.
             </p>
             <div>
-                <div className={styles.socialIcons}> {/* Adicione a classe socialIcons aqui */}
+                <div className={styles.socialIcons}> 
                     <a href="https://www.facebook.com/newopenbar/" target="_blank" rel="noopener noreferrer">
                         <i className="bi bi-facebook"></i>
                     </a>
