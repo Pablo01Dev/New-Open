@@ -5,26 +5,53 @@ import { carouselHorizontal, carouselVertical } from '../../../data';
 
 function CarouselConteiner() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const { ref, inView } = useInView({ triggerOnce: true }); // Monitorar quando o carrossel estiver visível
+    const [leftImages, setLeftImages] = useState([]);
+    const [rightImages, setRightImages] = useState([]);
+    const { ref, inView } = useInView({ triggerOnce: true });
+
+    // Função para embaralhar um array e pegar um número aleatório de imagens
+    const getRandomImages = (array, count) => {
+        const shuffled = array.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, count);
+    };
 
     useEffect(() => {
-        let intervalId;
-        if (inView) { // Inicia o carrossel apenas quando visível
+        let intervalId, leftInterval, rightInterval;
+
+        if (inView) { // Inicia os carrosseis apenas quando visível
+            // Atualiza as imagens aleatórias
+            setLeftImages(getRandomImages(carouselHorizontal, 2));
+            setRightImages(getRandomImages(carouselHorizontal, 2));
+
             intervalId = setInterval(() => {
                 setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselVertical.length); 
             }, 2000);
+
+            leftInterval = setInterval(() => {
+                setLeftImages(getRandomImages(carouselHorizontal, 2)); // Atualiza as imagens aleatórias do lado esquerdo
+            }, 2000);
+
+            rightInterval = setInterval(() => {
+                setRightImages(getRandomImages(carouselHorizontal, 2)); // Atualiza as imagens aleatórias do lado direito
+            }, 2000);
         } else {
-            clearInterval(intervalId); // Para o carrossel se não estiver visível
+            clearInterval(intervalId);
+            clearInterval(leftInterval);
+            clearInterval(rightInterval);
         }
 
-        return () => clearInterval(intervalId); // Limpa o intervalo quando o componente for desmontado ou invisível
-    }, [inView]); // Re-efetua o efeito sempre que a visibilidade mudar
+        return () => {
+            clearInterval(intervalId);
+            clearInterval(leftInterval);
+            clearInterval(rightInterval);
+        };
+    }, [inView]);
 
     return (
         <div className={styles.carouselContainer} ref={ref}>
-            {/* Coluna da esquerda - Imagens horizontais */}
+            {/* Coluna da esquerda - Imagens aleatórias horizontais */}
             <div className={styles.carouselLeftRight}>
-                {carouselHorizontal.slice(0, 2).map((item) => (
+                {leftImages.map((item) => (
                     <div key={item.id} className={styles.carouselItem}>
                         <img src={item.image} alt={item.title} className={styles.carouselImage} />
                     </div>
@@ -40,9 +67,9 @@ function CarouselConteiner() {
                 />
             </div>
 
-            {/* Coluna da direita - Imagens horizontais */}
+            {/* Coluna da direita - Imagens aleatórias horizontais */}
             <div className={styles.carouselLeftRight}>
-                {carouselHorizontal.slice(2, 4).map((item) => (
+                {rightImages.map((item) => (
                     <div key={item.id} className={styles.carouselItem}>
                         <img src={item.image} alt={item.title} className={styles.carouselImage} />
                     </div>
