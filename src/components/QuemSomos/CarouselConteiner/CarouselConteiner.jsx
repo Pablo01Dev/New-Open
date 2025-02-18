@@ -1,27 +1,27 @@
 import React from "react";
 import styles from './CarouselConteiner.module.css';
-import { carouselData } from '../../../data';
+import { carouselHorizontal, carouselVertical } from '../../../data';
 
 function CarouselConteiner() {
     return (
         <div className={styles.carouselContainer}>
-            {/* Coluna da esquerda */}
+            {/* Coluna da esquerda - Imagens horizontais */}
             <div className={styles.carouselLeftRight}>
-                {carouselData.slice(0, 2).map((item) => (
+                {carouselHorizontal.slice(0, 2).map((item) => (
                     <div key={item.id} className={styles.carouselItem}>
                         <img src={item.image} alt={item.title} className={styles.carouselImage} />
                     </div>
                 ))}
             </div>
 
-            {/* Carrossel central */}
+            {/* Carrossel central - Imagem vertical */}
             <div className={styles.carouselItemCenter}>
-                <img src={carouselData[2].image} alt={carouselData[2].title} className={styles.carouselImage} />
+                <img src={carouselVertical[0].image} alt={carouselVertical[0].title} className={styles.carouselImage} />
             </div>
 
-            {/* Coluna da direita */}
+            {/* Coluna da direita - Imagens horizontais */}
             <div className={styles.carouselLeftRight}>
-                {carouselData.slice(3, 5).map((item) => (
+                {carouselHorizontal.slice(2, 4).map((item) => (
                     <div key={item.id} className={styles.carouselItem}>
                         <img src={item.image} alt={item.title} className={styles.carouselImage} />
                     </div>
