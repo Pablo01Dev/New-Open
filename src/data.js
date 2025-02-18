@@ -7,7 +7,7 @@ export const testimonials = [
 ];
 
 export const drinks = [
-    { id: 1, titulo: "Mojito", imagem: "src/images/drinks/amoras.jpeg" },
+    { id: 1, titulo: "Mojito", imagem: "/images/drinks/amoras.jpeg" },
     { id: 2, titulo: "Caipirinha", imagem: "src/images/drinks/amoras.jpeg" },
     { id: 3, titulo: "Piña Colada", imagem: "src/images/drinks/amoras.jpeg" },
     { id: 4, titulo: "Daiquiri", imagem: "src/images/drinks/amoras.jpeg" },
@@ -16,9 +16,9 @@ export const drinks = [
 ];
 
 export const carouselHorizontal = [
-    { id: 1, title: "Carrossel 1", image: "src/images/eventos/horizontal/eventos-horizontal(1).jpg" },
-    { id: 2, title: "Carrossel 2", image: "src/images/eventos/horizontal/eventos-horizontal(2).jpg" },
-    { id: 3, title: "Carrossel 3", image: "src/images/eventos/horizontal/eventos-horizontal(3).jpg" },
+    { id: 1, title: "Carrossel 1", image: "/images/eventos/horizontal/eventos-horizontal(1).jpg" },
+    { id: 2, title: "Carrossel 2", image: "/images/eventos/horizontal/eventos-horizontal(2).jpg" },
+    { id: 3, title: "Carrossel 3", image: "/images/eventos/horizontal/eventos-horizontal(3).jpg" },
     { id: 4, title: "Carrossel 4", image: "src/images/eventos/horizontal/eventos-horizontal(4).jpg" },
     { id: 5, title: "Carrossel 5", image: "src/images/eventos/horizontal/eventos-horizontal(5).jpg" },
     { id: 6, title: "Carrossel 6", image: "src/images/eventos/horizontal/eventos-horizontal(6).jpg" },
@@ -50,9 +50,9 @@ export const carouselHorizontal = [
 
 
 export const carouselVertical = [
-    { id: 1, title: "Carrossel 1", image: "src/images/eventos/vertical/eventos-vertical(1).jpg" },
-    { id: 2, title: "Carrossel 2", image: "src/images/eventos/vertical/eventos-vertical(2).jpg" },
-    { id: 3, title: "Carrossel 3", image: "src/images/eventos/vertical/eventos-vertical(3).jpg" },
+    { id: 1, title: "Carrossel 1", image: "/images/eventos/vertical/eventos-vertical(1).jpg" },
+    { id: 2, title: "Carrossel 2", image: "/images/eventos/vertical/eventos-vertical(2).jpg" },
+    { id: 3, title: "Carrossel 3", image: "/images/eventos/vertical/eventos-vertical(3).jpg" },
     { id: 4, title: "Carrossel 4", image: "src/images/eventos/vertical/eventos-vertical(4).jpg" },
     { id: 5, title: "Carrossel 5", image: "src/images/eventos/vertical/eventos-vertical(5).jpg" },
     { id: 6, title: "Carrossel 6", image: "src/images/eventos/vertical/eventos-vertical(6).jpg" },
