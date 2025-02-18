@@ -7,7 +7,7 @@ function Header() {
     return (
         <div className={styles.container}>
             <div className={styles.logo}>
-                <img src="" alt="newopen" />
+                <img src="../../src/images/website/logo-vertical.svg" alt="newopen" />
             </div>
             <div className={styles.navContainer}>
                 <nav>
