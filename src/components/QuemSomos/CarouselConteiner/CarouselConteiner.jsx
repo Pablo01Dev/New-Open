@@ -7,6 +7,7 @@ function CarouselConteiner() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [leftImages, setLeftImages] = useState([]);
     const [rightImages, setRightImages] = useState([]);
+    const [fade, setFade] = useState(false); // ✅ Adicionando estado fade
     const { ref, inView } = useInView({ triggerOnce: true });
 
     // Função para embaralhar um array e pegar um número aleatório de imagens
@@ -18,22 +19,35 @@ function CarouselConteiner() {
     useEffect(() => {
         let intervalId, leftInterval, rightInterval;
 
-        if (inView) { // Inicia os carrosseis apenas quando visível
-            // Atualiza as imagens aleatórias
+        if (inView) {
+            setFade(true); // ✅ Agora setFade está definido corretamente
+
             setLeftImages(getRandomImages(carouselHorizontal, 2));
             setRightImages(getRandomImages(carouselHorizontal, 2));
 
             intervalId = setInterval(() => {
-                setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselVertical.length); 
-            }, 2000);
+                setFade(false);
+                setTimeout(() => {
+                    setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselVertical.length);
+                    setFade(true);
+                }, 500); // Tempo para a animação do fade-out antes da troca
+            }, 3000);
 
             leftInterval = setInterval(() => {
-                setLeftImages(getRandomImages(carouselHorizontal, 2)); // Atualiza as imagens aleatórias do lado esquerdo
-            }, 2000);
+                setFade(false);
+                setTimeout(() => {
+                    setLeftImages(getRandomImages(carouselHorizontal, 2));
+                    setFade(true);
+                }, 500);
+            }, 3000);
 
             rightInterval = setInterval(() => {
-                setRightImages(getRandomImages(carouselHorizontal, 2)); // Atualiza as imagens aleatórias do lado direito
-            }, 2000);
+                setFade(false);
+                setTimeout(() => {
+                    setRightImages(getRandomImages(carouselHorizontal, 2));
+                    setFade(true);
+                }, 500);
+            }, 3000);
         } else {
             clearInterval(intervalId);
             clearInterval(leftInterval);
@@ -53,17 +67,21 @@ function CarouselConteiner() {
             <div className={styles.carouselLeftRight}>
                 {leftImages.map((item) => (
                     <div key={item.id} className={styles.carouselItem}>
-                        <img src={item.image} alt={item.title} className={styles.carouselImage} />
+                        <img 
+                            src={item.image} 
+                            alt={item.title} 
+                            className={`${styles.carouselImage} ${fade ? styles.fade : styles.fadeOut}`} 
+                        />
                     </div>
                 ))}
             </div>
 
             {/* Carrossel central - Imagem vertical */}
             <div className={styles.carouselItemCenter}>
-                <img 
-                    src={carouselVertical[currentIndex].image} 
-                    alt={carouselVertical[currentIndex].title} 
-                    className={styles.carouselImage} 
+                <img
+                    src={carouselVertical[currentIndex].image}
+                    alt={carouselVertical[currentIndex].title}
+                    className={`${styles.carouselImage} ${fade ? styles.fade : styles.fadeOut}`}
                 />
             </div>
 
@@ -71,7 +89,11 @@ function CarouselConteiner() {
             <div className={styles.carouselLeftRight}>
                 {rightImages.map((item) => (
                     <div key={item.id} className={styles.carouselItem}>
-                        <img src={item.image} alt={item.title} className={styles.carouselImage} />
+                        <img 
+                            src={item.image} 
+                            alt={item.title} 
+                            className={`${styles.carouselImage} ${fade ? styles.fade : styles.fadeOut}`} 
+                        />
                     </div>
                 ))}
             </div>

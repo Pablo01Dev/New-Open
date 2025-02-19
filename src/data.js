@@ -61,16 +61,5 @@ export const carouselVertical = [
     { id: 17, title: "Carrossel 17", image: "/images/eventos/vertical/eventos-vertical(17).jpg" },
     { id: 18, title: "Carrossel 18", image: "/images/eventos/vertical/eventos-vertical(18).jpg" },
     { id: 19, title: "Carrossel 19", image: "/images/eventos/vertical/eventos-vertical(19).jpg" },
-    { id: 20, title: "Carrossel 20", image: "/images/eventos/vertical/eventos-vertical(20).jpg" },
-    { id: 21, title: "Carrossel 21", image: "/images/eventos/vertical/eventos-vertical(21).jpg" },
-    { id: 22, title: "Carrossel 22", image: "/images/eventos/vertical/eventos-vertical(22).jpg" },
-    { id: 23, title: "Carrossel 23", image: "/images/eventos/vertical/eventos-vertical(23).jpg" },
-    { id: 24, title: "Carrossel 24", image: "/images/eventos/vertical/eventos-vertical(24).jpg" },
-    { id: 25, title: "Carrossel 25", image: "/images/eventos/vertical/eventos-vertical(25).jpg" },
-    { id: 26, title: "Carrossel 26", image: "/images/eventos/vertical/eventos-vertical(26).jpg" },
-    { id: 27, title: "Carrossel 27", image: "/images/eventos/vertical/eventos-vertical(27).jpg" },
-    { id: 28, title: "Carrossel 28", image: "/images/eventos/vertical/eventos-vertical(28).jpg" },
-    { id: 29, title: "Carrossel 29", image: "/images/eventos/vertical/eventos-vertical(29).jpg" },
-    { id: 30, title: "Carrossel 30", image: "/images/eventos/vertical/eventos-vertical(30).jpg" }
 ];
 
