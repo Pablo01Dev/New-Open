@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from './Depoimento.module.css';
-import { testimonials } from "../../data"; 
+import { testimonials } from "../../data";
+import { BsPersonCircle } from 'react-icons/bs'; // Ícone que estamos tentando
 
 function Depoimento() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,9 +24,14 @@ function Depoimento() {
             <div className={styles.carousel}>
                 {testimonials.slice(currentIndex, currentIndex + 3).map(testimonial => (
                     <div key={testimonial.id} className={styles.testimonial}>
-                        <h2>{testimonial.nome}</h2>
+                        <div className={styles.person}>
+                            <BsPersonCircle style={{ fontSize: '25px', color: 'gray', marginTop: '.7em' }} />
+                            <div className={styles.personName}>
+                                <h2>{testimonial.nome}</h2>
+                                <span>{testimonial.evento}</span>
+                            </div>
+                        </div>
                         <p>{testimonial.depoimento}</p>
-                        <span>{testimonial.evento}</span>
                     </div>
                 ))}
             </div>

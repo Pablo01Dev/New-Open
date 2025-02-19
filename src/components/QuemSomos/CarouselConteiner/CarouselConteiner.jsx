@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { useInView } from 'react-intersection-observer';
-import styles from './CarouselConteiner.module.css';
-import { carouselHorizontal, carouselVertical } from '../../../data';
+import { useInView } from "react-intersection-observer";
+import styles from "./CarouselConteiner.module.css";
+import { carouselHorizontal, carouselVertical } from "../../../data";
 
 function CarouselConteiner() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [leftImages, setLeftImages] = useState([]);
     const [rightImages, setRightImages] = useState([]);
-    const [fade, setFade] = useState(false); // ✅ Adicionando estado fade
+    const [isAnimating, setIsAnimating] = useState(false);
     const { ref, inView } = useInView({ triggerOnce: true });
 
-    // Função para embaralhar um array e pegar um número aleatório de imagens
     const getRandomImages = (array, count) => {
-        const shuffled = array.sort(() => 0.5 - Math.random());
+        const shuffled = [...array].sort(() => 0.5 - Math.random());
         return shuffled.slice(0, count);
     };
 
@@ -20,33 +19,32 @@ function CarouselConteiner() {
         let intervalId, leftInterval, rightInterval;
 
         if (inView) {
-            setFade(true); // ✅ Agora setFade está definido corretamente
-
+            // Imagens aparecem imediatamente sem animação no início
             setLeftImages(getRandomImages(carouselHorizontal, 2));
             setRightImages(getRandomImages(carouselHorizontal, 2));
 
             intervalId = setInterval(() => {
-                setFade(false);
+                setIsAnimating(true);
                 setTimeout(() => {
                     setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselVertical.length);
-                    setFade(true);
-                }, 500); // Tempo para a animação do fade-out antes da troca
+                    setIsAnimating(false);
+                }, 600); // Duração da animação
             }, 3000);
 
             leftInterval = setInterval(() => {
-                setFade(false);
+                setIsAnimating(true);
                 setTimeout(() => {
                     setLeftImages(getRandomImages(carouselHorizontal, 2));
-                    setFade(true);
-                }, 500);
+                    setIsAnimating(false);
+                }, 600);
             }, 3000);
 
             rightInterval = setInterval(() => {
-                setFade(false);
+                setIsAnimating(true);
                 setTimeout(() => {
                     setRightImages(getRandomImages(carouselHorizontal, 2));
-                    setFade(true);
-                }, 500);
+                    setIsAnimating(false);
+                }, 600);
             }, 3000);
         } else {
             clearInterval(intervalId);
@@ -67,10 +65,10 @@ function CarouselConteiner() {
             <div className={styles.carouselLeftRight}>
                 {leftImages.map((item) => (
                     <div key={item.id} className={styles.carouselItem}>
-                        <img 
-                            src={item.image} 
-                            alt={item.title} 
-                            className={`${styles.carouselImage} ${fade ? styles.fade : styles.fadeOut}`} 
+                        <img
+                            src={item.image}
+                            alt={item.title}
+                            className={`${styles.carouselImage} ${isAnimating ? styles.slideLeft : ""}`}
                         />
                     </div>
                 ))}
@@ -81,7 +79,7 @@ function CarouselConteiner() {
                 <img
                     src={carouselVertical[currentIndex].image}
                     alt={carouselVertical[currentIndex].title}
-                    className={`${styles.carouselImage} ${fade ? styles.fade : styles.fadeOut}`}
+                    className={`${styles.carouselImage}`}
                 />
             </div>
 
@@ -89,10 +87,10 @@ function CarouselConteiner() {
             <div className={styles.carouselLeftRight}>
                 {rightImages.map((item) => (
                     <div key={item.id} className={styles.carouselItem}>
-                        <img 
-                            src={item.image} 
-                            alt={item.title} 
-                            className={`${styles.carouselImage} ${fade ? styles.fade : styles.fadeOut}`} 
+                        <img
+                            src={item.image}
+                            alt={item.title}
+                            className={`${styles.carouselImage} ${isAnimating ? styles.slideRight : ""}`}
                         />
                     </div>
                 ))}
