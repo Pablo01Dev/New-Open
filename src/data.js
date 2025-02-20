@@ -10,18 +10,16 @@ export const testimonials = [
 ];
 
 export const drinks = [
-    { id: 1, titulo: "Mojito", imagem: "/images/drinks/amoras.jpeg" },
-    { id: 2, titulo: "Caipirinha", imagem: "/images/drinks/amoras.jpeg" },
-    { id: 3, titulo: "Piña Colada", imagem: "/images/drinks/amoras.jpeg" },
-    { id: 4, titulo: "Daiquiri", imagem: "/images/drinks/amoras.jpeg" },
-    { id: 5, titulo: "Margarita", imagem: "/images/drinks/amoras.jpeg" },
-    { id: 6, titulo: "Gin Tônica", imagem: "/images/drinks/amoras.jpeg" },
-    { id: 7, titulo: "Mojito", imagem: "/images/drinks/amoras.jpeg" },
-    { id: 8, titulo: "Caipirinha", imagem: "/images/drinks/amoras.jpeg" },
-    { id: 9, titulo: "Piña Colada", imagem: "/images/drinks/amoras.jpeg" },
-    { id: 10, titulo: "Daiquiri", imagem: "/images/drinks/amoras.jpeg" },
-    { id: 11, titulo: "Margarita", imagem: "/images/drinks/amoras.jpeg" },
-    { id: 12, titulo: "Gin Tônica", imagem: "/images/drinks/amoras.jpeg" },
+    { id: 1, titulo: "Amoras", imagem: "/images/drinks/amoras.jpeg" },
+    { id: 2, titulo: "Aperol Spritz", imagem: "/images/drinks/aperol-spritz.jpg" },
+    { id: 3, titulo: "Arpoador", imagem: "/images/drinks/arpoador.jpg" },
+    { id: 4, titulo: "Coconut Mint Collins", imagem: "/images/drinks/coconut.jpeg" },
+    { id: 5, titulo: "Di Fiori", imagem: "/images/drinks/di-fiori.jpg" },
+    { id: 6, titulo: "Gin Tônica", imagem: "/images/drinks/gin-tonica.jpeg" },
+    { id: 7, titulo: "Moscow Mule", imagem: "/images/drinks/moscow-mule.jpeg" },
+    { id: 8, titulo: "Gin Tropical", imagem: "/images/drinks/gin-tropical.jpeg" },
+    { id: 9, titulo: "Royal", imagem: "/images/drinks/royal.jpg" },
+    { id: 10, titulo: "Yellow Dream", imagem: "/images/drinks/Yellow.webp" },
 ];
 
 export const carouselHorizontal = [

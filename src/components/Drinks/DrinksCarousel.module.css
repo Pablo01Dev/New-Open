@@ -2,7 +2,9 @@
     padding-top: 8em;
     padding-bottom: 8em;
     background: rgb(0, 0, 0);
-    background: linear-gradient(162deg, rgba(0, 0, 0, 1) 73%, rgba(130, 29, 48, 1) 100%);
+    background: radial-gradient(circle at 90% center, rgb(109, 0, 36) 0.1%, rgba(0,0,0,1) 35%);
+
+
 }
 
 .carouselContainer {
@@ -25,17 +27,18 @@
 }
 
 .drink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .6em; /* Adiciona espaço entre a imagem e o título */
     position: relative;
     min-width: 200px;
     max-width: 250px;
-    height: 16em;
+    height: auto; /* Ajusta a altura conforme o conteúdo */
     border-radius: 8px;
     overflow: hidden;
     scroll-snap-align: start;
     transition: transform 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
 }
 
 .drink:hover {
@@ -45,44 +48,59 @@
 .image {
     width: 100%;
     height: 100%;
-    /* Garante que a imagem ocupe toda a altura da div */
     object-fit: cover;
-    /* Faz com que a imagem cubra a div, cortando as partes que excedem */
     border-radius: 8px;
 }
 
 
 .titleBackground {
-    position: absolute;
-    bottom: 0;
-    padding: 0;
     width: 100%;
-    background-color: rgba(255, 192, 203, 0.8);
-    /* Fundo rosa */
+    background-color: rgba(208, 25, 55, 0.8);
     text-align: center;
     padding: 10px;
 }
 
+
+.image {
+    width: 100%;
+    height: 16em;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
 .title {
     font-size: 1.2rem;
-    color: #333;
+    color: #000000;
     margin: 0;
-    text-align: center;
-    /* Certificando que o texto será centralizado */
 }
 
 .titulo {
     text-align: center;
+    margin-bottom: 1em; /* Adiciona um espaçamento entre o título e o carrossel */
+    color: rgb(255, 255, 255); /* Ajuste a cor conforme necessário */
 }
 
 
+.imgBackground {
+    width: 100%;
+    height: 10em;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+
+.titleBackground {
+border-radius: 10px;
+}
 
 .arrowButton {
     background-color: transparent;
     border: none;
     font-size: 2rem;
-    color: #333;
+    color: #ffffff;
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -92,7 +110,7 @@
 }
 
 .arrowButton:hover {
-    color: #646cff;
+    color: #cc1313;
 }
 
 .arrowButton:focus {

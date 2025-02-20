@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from './DrinksCarousel.module.css';
 import { drinks } from "../../data";
+import Social from "../Social/Social";
 
 function DrinksCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,6 +36,7 @@ function DrinksCarousel() {
                 </div>
                 <button className={styles.arrowButton} onClick={nextSlide}>→</button>
             </div>
+            <Social />  
         </div>
     );
 }

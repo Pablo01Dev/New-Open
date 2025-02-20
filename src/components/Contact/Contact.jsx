@@ -10,7 +10,6 @@ function Contact() {
             <img src="caminho/para/sua/imagem.jpg" alt="Descrição da imagem" /> 
 
             <div className={styles.contactInfo}>
-                <h2>(21) 99179-7829</h2>
                 <h2>Trabalhe Conosco</h2>
                 <h2>atendimentorj@newopenbar.com.br</h2>
             </div>

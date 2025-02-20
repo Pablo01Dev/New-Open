@@ -6,10 +6,6 @@
     text-align: center;
     padding-top: 8em;
     padding-bottom: 8em;
-    background-color: #f8f9fa;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: rgb(0, 0, 0);
-    background: linear-gradient(18deg, rgba(0, 0, 0, 1) 72%, rgba(130, 29, 48, 1) 100%);
 }
 .subContainer {
     display: flex;

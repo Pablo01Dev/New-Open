@@ -15,7 +15,6 @@
         <QuemSomos />
         <Depoimento />
         <DrinksCarousel />
-        <Social />
         <Contact />
       </div>
     );
