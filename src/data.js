@@ -4,6 +4,9 @@ export const testimonials = [
     { id: 3, nome: "Carlos Souza", depoimento: "Muito bem organizado!", evento: "Conferência" },
     { id: 4, nome: "Ana Pereira", depoimento: "Ótimo serviço!", evento: "Workshop" },
     { id: 5, nome: "Fernando Lima", depoimento: "Tudo perfeito!", evento: "Seminário" },
+    { id: 6, nome: "Carlos Souza", depoimento: "Muito bem organizado!", evento: "Conferência" },
+    { id: 7, nome: "Ana Pereira", depoimento: "Ótimo serviço!", evento: "Workshop" },
+    { id: 8, nome: "Fernando Lima", depoimento: "Tudo perfeito!", evento: "Seminário" },
 ];
 
 export const drinks = [
@@ -13,6 +16,12 @@ export const drinks = [
     { id: 4, titulo: "Daiquiri", imagem: "/images/drinks/amoras.jpeg" },
     { id: 5, titulo: "Margarita", imagem: "/images/drinks/amoras.jpeg" },
     { id: 6, titulo: "Gin Tônica", imagem: "/images/drinks/amoras.jpeg" },
+    { id: 7, titulo: "Mojito", imagem: "/images/drinks/amoras.jpeg" },
+    { id: 8, titulo: "Caipirinha", imagem: "/images/drinks/amoras.jpeg" },
+    { id: 9, titulo: "Piña Colada", imagem: "/images/drinks/amoras.jpeg" },
+    { id: 10, titulo: "Daiquiri", imagem: "/images/drinks/amoras.jpeg" },
+    { id: 11, titulo: "Margarita", imagem: "/images/drinks/amoras.jpeg" },
+    { id: 12, titulo: "Gin Tônica", imagem: "/images/drinks/amoras.jpeg" },
 ];
 
 export const carouselHorizontal = [

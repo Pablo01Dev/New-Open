@@ -7,88 +7,151 @@
     width: 100%;
 }
 
-.carouselLeftRight {
-    display: flex;  
+.leftColumn,
+.rightColumn {
+    display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
 }
 
-.carouselItem {
+.imageBox1,
+.imageBox2 {
     width: 400px;
     height: 190px;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     overflow: hidden;
-    position: relative;
+}
+
+.imageBox3,
+.imageBox4 {
+    width: 400px;
+    height: 190px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .carouselItemCenter {
     width: 200px;
     height: 400px;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     overflow: hidden;
+}
+
+.carousel {
     position: relative;
-}
-
-/* Animação das imagens */
-@keyframes slideLeft {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes slideRight {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(100%);
-    }
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-100%);
-    }
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .carouselImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.slide-left {
-    animation: slideLeft 0.6s forwards;
+.carouselImage.active {
+    opacity: 1;
 }
 
-.slide-right {
-    animation: slideRight 0.6s forwards;
+.carouselImageContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.slide-up {
-    animation: slideUp 0.6s forwards;
+
+.leftColumn, .rightColumn, .carouselItemCenter {
+    opacity: 0; /* Começa invisível */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Adiciona transition */
 }
 
+.animate { /* Classe que será adicionada pelo JavaScript */
+    opacity: 1;
+    transform: translateY(0); /* Remove a transformação inicial */
+}
 
+/* Definição das animações */
+@keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px); /* Começa fora da tela à esquerda */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Termina na posição normal */
+    }
+}
 
-h3 {
-    margin-top: 5px;
-    font-size: 1.1rem;
-    color: white;
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px); /* Começa fora da tela à direita */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Termina na posição normal */
+    }
+}
+
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Começa fora da tela em baixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Termina na posição normal */
+    }
+}
+
+/* ... (estilos existentes) */
+
+@media (max-width: 768px) { /* Exemplo: telas menores que 768px de largura */
+    .carouselContainer {
+        flex-direction: column; /* Layout em coluna */
+        align-items: center; /* Centralizar horizontalmente */
+    }
+
+    .leftColumn {
+        width: 100%; /* Largura total */
+        flex-direction: column; /* Layout em coluna */
+        align-items: center; /* Centralizar horizontalmente */
+        margin-bottom: 20px; /* Espaço abaixo da coluna esquerda */
+    }
+
+    .imageBox1,
+    .imageBox2 {
+        width: 100%; /* Largura total */
+        margin-bottom: 20px; /* Espaço entre as imagens */
+    }
+
+    .carouselItemCenter {
+        width: 100%; /* Largura total */
+    }
+
+    .rightColumn {
+        display: none; /* Esconder a coluna direita */
+    }
 }
