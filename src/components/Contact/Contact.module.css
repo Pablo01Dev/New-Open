@@ -6,6 +6,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 .contactInfo {
@@ -22,7 +24,7 @@
 }
 
 .contactInfo h2 {
-    font-size: 19px;
+    font-size: px;
     color: white;
 }
 
@@ -61,7 +63,7 @@
     background-color: #a3122f;
 }
 
-/* 🌈 Linha de separação */
+
 .line {
     width: 100%;
     height: 2em;
@@ -86,6 +88,7 @@ img {
 
 .contactInfo h2 {
     color: white;
+    font-weight: 300;
 }
 
 /* 🌍 Responsividade - Versão Mobile */
