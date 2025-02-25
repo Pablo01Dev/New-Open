@@ -1,0 +1,8 @@
+.footer {
+    background-color: #000000; /* Cor de fundo escura para contraste */
+    color: #616161; /* Cor do texto branca */
+    text-align: center; /* Centraliza o texto */
+    padding: 8px 0; /* Espaçamento interno */
+    font-size: 10px; /* Tamanho do texto */
+    border-top: 2px solid #ff002b;; /* Linha superior para destaque */
+}

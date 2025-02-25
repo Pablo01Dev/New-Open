@@ -5,17 +5,21 @@
   import DrinksCarousel from './components/Drinks/DrinksCarousel';
   import Social from './components/Social/Social';
   import Contact from './components/Contact/Contact';
-
+  import Footer from './components/Footer/Footer';
+  import Services from './components/Services/services';
   import './App.css';
+
 
   function App() {
     return (
       <div>
         <Home />
         <QuemSomos />
+        <Services />
         <Depoimento />
         <DrinksCarousel />
         <Contact />
+        <Footer />
       </div>
     );
   }
