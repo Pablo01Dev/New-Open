@@ -8,6 +8,7 @@
     justify-content: center;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .contactInfo {
@@ -21,13 +22,10 @@
     padding: 5em 0 3em;
     font-size: 10px;
     font-weight: 100;
+    gap: 1.5em;
     padding-bottom: 5em;
 }
 
-.contactInfo h2 {
-    font-size: px;
-    color: white;
-}
 
 /* 🎨 Estilos dos Links */
 .contactContainer a {
@@ -40,7 +38,7 @@
 }
 
 .contactContainer a:hover {
-    text-decoration: underline;
+    color: rgb(131, 23, 38);
 }
 
 /* 🎨 Botão */
@@ -78,10 +76,9 @@ img {
     height: auto;
 }
 
-.contactContainer h1,
 .contactContainer h2 {
     color: black; /* Define explicitamente a cor para o texto */
-    margin: 0;
+    margin: 4px;
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 500;
     font-size: 24px;
@@ -93,21 +90,15 @@ img {
 }
 
 /* 🌍 Responsividade - Versão Mobile */
-@media (max-width: 768px) {
-    .contactContainer {
-        padding: 10px;
-    }
+@media (max-width: 768px) {     
 
     h1 {
         font-size: 1.5rem;
     }
 
-    h2 {
-        font-size: 1.2rem;
-    }
-
     .contactInfo {
         text-align: center;
+        padding: 2em;
     }
 
     .local h3 {

@@ -1,101 +1,132 @@
 /* Home.module.css */
 :root {
-    --title-color: #fff; /* Substitua pela cor desejada */
-    --padding-top-desktop: 4em;
-    --padding-top-mobile: 2em;
-    --logo-width-desktop: 14em;
-    --logo-width-mobile: 10em;
-    --title-margin-top-desktop: 6em;
-    --title-margin-top-mobile: 3em;
-    --title-gap-desktop: 7em;
-    --title-gap-mobile: 2em;
-    --drink-width-desktop: 28em;
-    --drink-width-mobile: 18em;
-    --h1-font-size-desktop: 29px;
-    --h1-font-size-mobile: 24px;
+  --title-color: #fff;
+  --padding-top-desktop: 4em;
+  --padding-top-mobile: 2em;
+  --logo-width-desktop: 14em;
+  --logo-width-mobile: 10em;
+  --title-margin-top-desktop: 6em;
+  --title-margin-top-mobile: 3em;
+  --title-gap-desktop: 7em;
+  --title-gap-mobile: 2em;
+  --drink-width-desktop: 28em;
+  --drink-width-mobile: 18em;
+  --h1-font-size-desktop: 29px;
+  --h1-font-size-mobile: 24px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../images/website/fundo-oficial.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 auto;
+  margin-bottom: -1px;
+  padding-top: var(--padding-top-desktop);
+  box-sizing: border-box;
+  opacity: 0; /* Começa invisível */
+  animation: fadeIn 1s ease-out forwards; /* Aplica o fade-in */
+}
+
+.logo {
+  width: var(--logo-width-desktop);
+  opacity: 0;
+  animation: fadeIn 1s 0.3s ease-out forwards; /* Atraso de 0.3s */
+}
+
+.title {
+  margin-top: var(--title-margin-top-desktop);
+  display: flex;
+  flex-direction: row;
+  gap: var(--title-gap-desktop);
+  align-items: center;
+}
+
+.backgroudDrink {
+  width: var(--drink-width-desktop);
+  opacity: 0;
+  transform: translateX(100%); /* Começa fora da tela à direita */
+  animation: slideIn 1s 0.6s ease-out forwards; /* Atraso de 0.6s */
+}
+
+h1 {
+  font-size: var(--h1-font-size-desktop);
+  font-weight: 300;
+  color: var(--title-color);
+  text-align: start;
+  margin: 20px 0;
+  line-height: 1.3;
+  opacity: 0;
+  animation: fadeIn 1s 0.9s ease-out forwards; /* Atraso de 0.9s */
+}
+
+h1 br {
+  display: block;
+  margin: 10px 0;
+}
+
+/* Keyframes para animações */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
   }
-  
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 100vh;
-    background-image: url("../../images/website/fundo-oficial.png");
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 0;
-    box-shadow: none;
-    margin: 0 auto;
-    padding-top: var(--padding-top-desktop);
-    box-sizing: border-box; /* Garante que o padding não ultrapasse a largura */
-  }
-  
-  .logo {
-    width: var(--logo-width-desktop);
-  }
-  
-  .title {
-    margin-top: var(--title-margin-top-desktop);
-    display: flex;
-    flex-direction: row;
-    gap: var(--title-gap-desktop);
-    align-items: center;
-  }
-  
-  .backgroudDrink {
-    width: var(--drink-width-desktop);
-  }
-  
-  h1 {
-    font-size: var(--h1-font-size-desktop);
-    font-weight: 300;
-    color: var(--title-color);
-    text-align: start;
-    margin: 20px 0;
-    line-height: 1.3;
-  }
-  
-  h1 br {
-    display: block;
-    margin: 10px 0;
-  }
-  
-  /* Responsividade para dispositivos móveis */
-  @media (max-width: 768px) {
-    .container {
       padding-top: var(--padding-top-mobile);
-    }
-  
-    .logo {
+  }
+
+  .logo {
       width: var(--logo-width-mobile);
-    }
-  
-    .title {
+  }
+
+  .title {
       margin-top: var(--title-margin-top-mobile);
-      flex-direction: column; /* Layout em coluna no mobile */
+      flex-direction: column;
       gap: var(--title-gap-mobile);
-    }
-  
-    .backgroudDrink {
+  }
+
+  .backgroudDrink {
       width: var(--drink-width-mobile);
-    }
-  
-    h1 {
+  }
+
+  h1 {
       font-size: var(--h1-font-size-mobile);
-      text-align: center; /* Centraliza o texto no mobile */
-    }
+      text-align: center;
   }
-  
-  @media (max-width: 480px) {
-    .container {
-      background-size: contain; /* Ajusta a imagem de fundo para telas menores */
+}
+
+@media (max-width: 480px) {
+  .container {
+      background-size: contain;
       background-position: center bottom;
-    }
-    .title {
-      gap: 1em;
-    }
   }
+  .title {
+      gap: 1em;
+  }
+}

@@ -15,8 +15,8 @@
       <div>
         <Home />
         <QuemSomos />
-        <Services />
         <Depoimento />
+        <Services />
         <DrinksCarousel />
         <Contact />
         <Footer />

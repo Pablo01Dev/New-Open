@@ -5,7 +5,7 @@ function Contact() {
     return (
         <div className={styles.contactContainer}>
             <div className={styles.line}></div>
-            <h1>Quer levar drinks incríveis para o seu evento?</h1>
+            <h2>Quer levar drinks incríveis para o seu evento?</h2>
             <h2>
                 <a href="#">CLIQUE AQUI</a> e solicite o seu orçamento!
             </h2>

@@ -5,20 +5,20 @@
     align-items: flex-start;
     margin: 20px;
     width: 100%;
-}
+  }
 
-.leftColumn,
-.rightColumn {
+  .leftColumn,
+  .rightColumn {
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
-}
+  }
 
-.imageBox1,
-.imageBox2,
-.imageBox3,
-.imageBox4 {
+  .imageBox1,
+  .imageBox2,
+  .imageBox3,
+  .imageBox4 {
     width: 400px;
     height: 190px;
     background-color: black;
@@ -27,9 +27,9 @@
     align-items: center;
     border-radius: 8px;
     overflow: hidden;
-}
+  }
 
-.carouselItemCenter {
+  .carouselItemCenter {
     width: 200px;
     height: 400px;
     background-color: black;
@@ -38,16 +38,16 @@
     align-items: center;
     border-radius: 8px;
     overflow: hidden;
-}
+  }
 
-.carousel {
+  .carousel {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
-}
+  }
 
-.carouselImage {
+  .carouselImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -55,9 +55,9 @@
     position: absolute;
     top: 0;
     left: 0;
-}
+  }
 
-.carouselImageContainer {
+  .carouselImageContainer {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -65,56 +65,66 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-}
+  }
 
-.leftColumn,
-.rightColumn,
-.carouselItemCenter {
+  .leftColumn,
+  .rightColumn,
+  .carouselItemCenter {
     opacity: 0;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-}
+  }
 
-.animate {
+  .animate {
     opacity: 1;
     transform: translateY(0);
-}
+  }
 
-@media (max-width: 768px) {
+  .leftColumn {
+    transition-delay: 0.2s;
+  }
+
+  .carouselItemCenter {
+    transition-delay: 0.4s;
+  }
+
+  .rightColumn {
+    transition-delay: 0.6s;
+  }
+
+  @media (max-width: 768px) {
     .carouselContainer {
-        flex-direction: row;
-        gap: 15px;
-        justify-content: center;
-        flex-wrap: wrap;
+      flex-direction: row;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .leftColumn {
-        width: 41.2%;
-        /* Metade da largura */
-        margin-bottom: 0;
-        /* Remove a margem inferior */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+      width: 41.2%;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
     }
 
     .imageBox1,
     .imageBox2 {
-        width: 100%;
-        /* Ocupa a largura total da coluna */
-        height: auto;
-        aspect-ratio: 16 / 9;
-        margin-bottom: 5px;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      margin-bottom: 5px;
     }
 
     .carouselItemCenter {
-        width: 27.7%;
-        /* Metade da largura */
-        height: auto;
-        aspect-ratio: 9 / 16;
+      width: 27.7%;
+      height: auto;
+      aspect-ratio: 9 / 16;
     }
 
     .rightColumn {
-        display: none;
+      display: none;
     }
-}
+  }
+
+  

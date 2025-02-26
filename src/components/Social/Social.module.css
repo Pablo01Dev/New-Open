@@ -1,30 +1,36 @@
-.socialContainer {
+.Container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 8em;
-    padding-bottom: 8em;
+    padding-top: 9em;
+    padding-bottom: 2em;
 }
-.subContainer {
+
+.socialContainer {
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: start;
-
+    justify-content: center;
+    width: 40%;
 }
-.socialContainer p {
+
+.Container p {
     text-align: start;
-    font-size: 1.3rem;
+    font-size: 20px;
     color: #ffffff;
     margin-bottom: 20px;
     margin-right: 2em;
 }
 
+.text { 
+    width: 60%;
+}
+
 .socialIcons {
     display: flex;
-    justify-content: center;
+    justify-content: start;
 }
 
 .socialIcons a {
@@ -39,12 +45,97 @@
     color: #ffffff;
 }
 
-.socialIcons a {
-    background: transparent !important;
+.Container img {
+    max-width: 60%;
+    margin-top: -12em;
+    margin-left: 9em;
+    opacity: 0;
+    /* Inicialmente invisível */
+    animation: fadeInRight 1s ease-out forwards;
+    /* Aplica a animação */
 }
 
-.socialContainer img {
-    max-width: 20%;
-    margin-top: 10em;
-    border-radius: 8px;
+.socialContainer p {
+    margin-right: 3em;
+}
+
+.subContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+
+/* Animação de fade-in da direita */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+        /* Começa 50px à direita */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* Termina na posição original */
+    }
+}
+
+/* Media query para telas menores (ex: smartphones) */
+@media (max-width: 768px) {
+    .Container {
+        flex-direction: column;
+        padding-top: 2em;
+        align-items: center;
+        justify-content: center;
+        padding: 3em;
+    }
+
+    .socialContainer {
+        width: 90%;
+    }
+
+    .socialContainer p {
+        margin-bottom: 4em;
+    }
+
+
+    .Container img {
+        margin-top: -1em;
+        margin-left: -.7em;
+        max-width: 90%;
+        opacity: 0;
+        /* Reinicia a opacidade */
+        animation: fadeIn 1s ease-out forwards;
+        /* Aplica a animação fadeIn normal */
+    }
+
+    .Container p {
+        margin-right: 0;
+    }
+
+    .socialIcons {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .socialIcons a {
+        font-size: 50px;
+        
+    }
+
+    .text { 
+        width: 100%;
+    }
+}
+
+/* Animação de fade-in padrão */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
