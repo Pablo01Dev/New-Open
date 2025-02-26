@@ -1,129 +1,128 @@
 /* ================================================= */
-/*                   GOOGLE FONTS                    */
+/* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 /* ================================================= */
-/*                    VARIÁVEIS CSS                  */
+/* VARIÁVEIS CSS */
 /* ================================================= */
 
 :root {
-  --main-font: 'Chakra Petch', sans-serif;
-  --secondary-font: 'Noto Sans', sans-serif;
-  --title-color: #ffffff; /* Corrigido: Defini a variável */
-  
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #000000;
-  
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    --main-font: 'Chakra Petch', sans-serif;
+    --secondary-font: 'Noto Sans', sans-serif;
+    --title-color: #ffffff;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #000000;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* ================================================= */
-/*                RESET E AJUSTES GERAIS             */
+/* RESET E AJUSTES GERAIS */
 /* ================================================= */
 
 * {
-  margin: 0;
-  box-sizing: border-box; /* Melhoria para evitar problemas de layout */
+    margin: 0;
+    box-sizing: border-box;
 }
 
 *:focus {
-  outline: none;
+    outline: none;
 }
 
 body {
-  display: flex; /* Adicionado para justify-content funcionar */
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: var(--background-color, #000000);
+    min-height: 100vh;
+    background-color: var(--background-color, #000000);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* ================================================= */
-/*                  ESTILOS DE TEXTO                 */
+/* ESTILOS DE TEXTO */
 /* ================================================= */
 
 h1 {
-  font-size: 30px;
-  line-height: 1.1;
-  color: var(--title-color);
-  font-family: var(--main-font) ;
+    font-size: 30px;
+    line-height: 1.1;
+    color: var(--title-color);
+    font-family: var(--main-font);
 }
 
 h2 {
-  font-size: 22px;
-  line-height: 1.1;
-  color: var(--title-color);
-  font-weight: 500;
-  font-family: var(--main-font) ;
+    font-size: 22px;
+    line-height: 1.1;
+    color: var(--title-color);
+    font-weight: 500;
+    font-family: var(--main-font);
 }
 
-p{
-  font-size: 16px;
-  line-height: 1.5;
-  font-family: var(--secondary-font); 
-  font-weight: 300;
-
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: var(--secondary-font);
+    font-weight: 300;
 }
 
-.heading-1 { /* Renomeei de .h1 */
-  font-family: var(--main-font);
+.heading-1 {
+    font-family: var(--main-font);
 }
 
-.heading-2 { /* Renomeei de .h2 */
-  font-family: var(--secondary-font);
+.heading-2 {
+    font-family: var(--secondary-font);
 }
 
 /* ================================================= */
-/*                   BOTÕES E LINKS                  */
+/* BOTÕES E LINKS */
 /* ================================================= */
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
+    color: #535bf2;
 }
 
-
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
 }
 
 /* ================================================= */
-/*                  PREFERÊNCIAS DE TEMA             */
+/* PREFERÊNCIAS DE TEMA */
 /* ================================================= */
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #000a13;
-    background-color: #ffffff;
-  }
+    :root {
+        color: #000a13;
+        background-color: #ffffff;
+    }
 
-
-  button {
-    background-color: #f9f9f9;
-  }
+    button {
+        background-color: #f9f9f9;
+    }
 }

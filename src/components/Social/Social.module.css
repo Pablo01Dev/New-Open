@@ -88,7 +88,7 @@
         padding-top: 2em;
         align-items: center;
         justify-content: center;
-        padding: 3em;
+        padding: 2em;
     }
 
     .socialContainer {
@@ -100,10 +100,10 @@
     }
 
 
-    .Container img {
+    .subContainer img {
         margin-top: -1em;
         margin-left: -.7em;
-        max-width: 90%;
+        max-width: 95%;
         opacity: 0;
         /* Reinicia a opacidade */
         animation: fadeIn 1s ease-out forwards;
@@ -115,12 +115,13 @@
     }
 
     .socialIcons {
-        justify-content: center;
+        justify-content: start;
         flex-direction: column;
     }
 
     .socialIcons a {
         font-size: 50px;
+        margin-left: -.2em;
         
     }
 

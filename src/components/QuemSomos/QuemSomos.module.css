@@ -6,6 +6,7 @@
     text-align: center;
     background-color: #ffffff;
     padding-top: 3em;
+    min-height: 100vh;
 }
 
 .text {
@@ -15,12 +16,7 @@
     box-sizing: border-box;
     width: 40%;
     height: auto;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.text.visible {
-    opacity: 1;
+    overflow-wrap: break-word;
 }
 
 .quemSomosContainer h2 {
@@ -29,7 +25,7 @@
     color: #000000;
 }
 
-.quemSomosContainer p { 
+.quemSomosContainer p {
     color: #000000;
     margin: 0 auto;
     font-size: 16px;
@@ -43,30 +39,46 @@
     width: 100%;
     margin-top: 4em;
     margin-bottom: 4em;
+    overflow: hidden;
 }
 
-/* Alterações aplicadas apenas na versão mobile */
+.carrossel img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 @media (max-width: 768px) {
+    .quemSomosContainer {
+        width: 100%;
+        padding-top: 2em;
+    }
+
     .text {
         text-align: center;
-        width: 100%;
-        padding: 0 1em;
+        width: 90%;
+        padding: 0 0.5em;
+        margin: 0 auto;
     }
 
     .quemSomosContainer p {
         text-align: center;
-        padding: 0 2em;
+        padding: 0 1em;
+        width: 90%;
+        margin: 1em auto 0 auto;
     }
 
     .carrossel {
         width: 100%;
-        height: auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        padding: 0 1em;
     }
 }
 
 body {
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Adicionado para ocultar a barra de rolagem horizontal */
 }
 
 * {

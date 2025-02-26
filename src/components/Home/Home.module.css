@@ -113,6 +113,9 @@ h1 br {
 
   .backgroudDrink {
       width: var(--drink-width-mobile);
+      margin: 0 auto; /* Centraliza horizontalmente */
+      transform: translateX(0); /* Remove o slide */
+      animation: fadeIn 1s 0.6s ease-out forwards; /* Mantém o fade-in */
   }
 
   h1 {

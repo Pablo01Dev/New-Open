@@ -98,30 +98,32 @@ img {
 
     .contactInfo {
         text-align: center;
-        padding: 2em 8em 2em 8em;
-        font-size: 1rem;
+        padding: 3em;
+        font-size: 16px;
+        /* Increased font size for better readability on mobile */
+    }
+
+
+    .contactInfo h2{
+
+        font-size: 18px;
         /* Increased font size for better readability on mobile */
     }
 
     .local h3 {
-        font-size: 1rem;
+        font-size: 11px;
     }
 
-    .contactInfo button {
+    .contactInfo button, a {
         width: 100%;
         /* Ensures button takes full width on mobile */
-        font-size: 1rem;
+        font-size: 12px;
         /* Increased font size for better readability on mobile */
-        padding: 15px;
-        /* Increased padding for better touch experience */
+        padding: 10px;
     }
 
-    .contactInfo a {
-        font-size: 1.2rem;
-        /* Increased font size for better readability on mobile */
-    }
-
-    .text {
-        width: 70%;
+    .text { 
+        width: 90%;
+        gap: 1em;
     }
 }

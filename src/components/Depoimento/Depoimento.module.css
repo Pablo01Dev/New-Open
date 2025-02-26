@@ -103,8 +103,8 @@
 
 @media (max-width: 768px) {
     .testimonial {
-        width: 95%; /* Ajuste para mobile */
-        padding: 15px;
+        width: 30%; /* Ajuste para mobile */
+        margin: 4em;
     }
 
     .prevButton, .nextButton {

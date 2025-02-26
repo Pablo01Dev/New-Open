@@ -104,6 +104,10 @@
   .cards {
       flex-direction: column; /* Organiza os cards em coluna */
   }
+
+  .cards p {
+    display: none;
+  }
 }
 
 /* Estilos para telas menores (smartphones) */
