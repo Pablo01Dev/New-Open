@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import styles from './Services.module.css';
 import img1 from '/images/website/xv.jpg';
 import img2 from '/images/website/casamento.jpg';
-import img3 from '/images/website/portela.jpg';
+import img3 from '/images/website/corporativo.jpeg';
 import img4 from '/images/website/rir.jpeg';
 
 function Services() {

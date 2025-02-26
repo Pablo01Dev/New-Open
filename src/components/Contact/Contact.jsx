@@ -5,10 +5,12 @@ function Contact() {
     return (
         <div className={styles.contactContainer}>
             <div className={styles.line}></div>
-            <h2>Quer levar drinks incríveis para o seu evento?</h2>
-            <h2>
-                <a href="#">CLIQUE AQUI</a> e solicite o seu orçamento!
-            </h2>
+            <div className={styles.text}>
+                <h2>Quer levar drinks incríveis para o seu evento?</h2>
+                <h2>
+                    <a href="#">CLIQUE AQUI</a> e solicite o seu orçamento!
+                </h2>
+            </div>
             <div className={styles.contactInfo}>
                 <h2>atendimentorj@newopenbar.com.br</h2>
                 <div className={styles.local}>

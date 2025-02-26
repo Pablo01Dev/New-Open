@@ -1,13 +1,10 @@
 .contactContainer {
-    padding: 20px;
     text-align: center;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0;
-    padding: 0;
     width: 100%;
 }
 
@@ -19,15 +16,13 @@
     flex-direction: column;
     align-items: center;
     margin-top: 4em;
-    padding: 5em 0 3em;
+    padding: 5em 2em 3em;
+    /* Adjusted padding for better mobile view */
     font-size: 10px;
     font-weight: 100;
     gap: 1.5em;
-    padding-bottom: 5em;
 }
 
-
-/* 🎨 Estilos dos Links */
 .contactContainer a {
     color: #c51639;
     font-weight: 700;
@@ -41,7 +36,6 @@
     color: rgb(131, 23, 38);
 }
 
-/* 🎨 Botão */
 .contactInfo button {
     background-color: #c51639;
     border: none;
@@ -50,34 +44,41 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
+    width: 20%;
+    /* Button takes full width on mobile */
+    box-sizing: border-box;
+    /* Ensures padding is included in width */
 }
 
 .contactInfo button a {
     color: white;
     font-size: 18px;
     text-decoration: none;
+    display: block;
+    /* Makes the link fill the button */
+    padding: 10px 0;
+    /* Centers the text vertically */
 }
+
 
 .contactInfo button:hover {
     background-color: #a3122f;
 }
 
-
 .line {
     width: 100%;
     height: 2em;
-    background: linear-gradient(31deg, rgba(8,0,1,1) 5%, rgba(111,13,28,1) 29%, #c51639 63%, rgba(94,1,20,1) 100%);
+    background: linear-gradient(31deg, rgba(8, 0, 1, 1) 5%, rgba(111, 13, 28, 1) 29%, #c51639 63%, rgba(94, 1, 20, 1) 100%);
     margin-bottom: 3em;
 }
 
-/* 📸 Imagens */
 img {
     max-width: 100%;
     height: auto;
 }
 
 .contactContainer h2 {
-    color: black; /* Define explicitamente a cor para o texto */
+    color: black;
     margin: 4px;
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 500;
@@ -89,8 +90,10 @@ img {
     font-weight: 300;
 }
 
-/* 🌍 Responsividade - Versão Mobile */
-@media (max-width: 768px) {     
+@media (max-width: 768px) {
+
+    .contactContainer {
+    }
 
     h1 {
         font-size: 1.5rem;
@@ -98,7 +101,9 @@ img {
 
     .contactInfo {
         text-align: center;
-        padding: 2em;
+        padding: 2em 8em 2em 8em;
+        font-size: 1rem;
+        /* Increased font size for better readability on mobile */
     }
 
     .local h3 {
@@ -106,6 +111,20 @@ img {
     }
 
     .contactInfo button {
-        width: 80%;
+        width: 100%;
+        /* Ensures button takes full width on mobile */
+        font-size: 1rem;
+        /* Increased font size for better readability on mobile */
+        padding: 15px;
+        /* Increased padding for better touch experience */
+    }
+
+    .contactInfo a {
+        font-size: 1.2rem;
+        /* Increased font size for better readability on mobile */
+    }
+
+    .text {
+        width: 70%;
     }
 }

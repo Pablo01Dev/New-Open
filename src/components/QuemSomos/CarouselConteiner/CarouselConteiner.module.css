@@ -1,130 +1,132 @@
 .carouselContainer {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    align-items: flex-start;
-    margin: 20px;
-    width: 100%;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 20px;
+  width: 100%;
+}
 
-  .leftColumn,
-  .rightColumn {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
+.leftColumn,
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
 
-  .imageBox1,
-  .imageBox2,
-  .imageBox3,
-  .imageBox4 {
-    width: 400px;
-    height: 190px;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    overflow: hidden;
-  }
+.imageBox1,
+.imageBox2,
+.imageBox3,
+.imageBox4 {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
 
-  .carouselItemCenter {
-    width: 200px;
-    height: 400px;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    overflow: hidden;
-  }
+.carouselItemCenter {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
+}
 
-  .carousel {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
-  .carouselImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 1s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+.carouselImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
-  .carouselImageContainer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
+.carouselImageContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
-  .leftColumn,
-  .rightColumn,
-  .carouselItemCenter {
-    opacity: 0;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-  }
+.leftColumn,
+.rightColumn,
+.carouselItemCenter {
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
 
-  .animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  .leftColumn {
-    transition-delay: 0.2s;
-  }
+.leftColumn {
+  transition-delay: 0.2s;
+}
 
-  .carouselItemCenter {
-    transition-delay: 0.4s;
-  }
+.carouselItemCenter {
+  transition-delay: 0.4s;
+}
 
-  .rightColumn {
-    transition-delay: 0.6s;
-  }
+.rightColumn {
+  transition-delay: 0.6s;
+}
 
-  @media (max-width: 768px) {
-    .carouselContainer {
+@media (max-width: 768px) {
+  .carouselContainer {
       flex-direction: row;
       gap: 15px;
       justify-content: center;
       flex-wrap: wrap;
-    }
+      width: 100%;
+      overflow-x: auto;
+  }
 
-    .leftColumn {
-      width: 41.2%;
+  .leftColumn {
+      width: 48%;
       margin-bottom: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 15px;
-    }
+  }
 
-    .imageBox1,
-    .imageBox2 {
+  .imageBox1,
+  .imageBox2 {
       width: 100%;
       height: auto;
       aspect-ratio: 16 / 9;
       margin-bottom: 5px;
-    }
-
-    .carouselItemCenter {
-      width: 27.7%;
-      height: auto;
-      aspect-ratio: 9 / 16;
-    }
-
-    .rightColumn {
-      display: none;
-    }
   }
 
-  
+  .carouselItemCenter {
+      width: 33%;
+      height: auto;
+      aspect-ratio: 9 / 16;
+  }
+
+  .rightColumn {
+      display: none;
+  }
+}
