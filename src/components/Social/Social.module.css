@@ -48,7 +48,7 @@
 .Container img {
     max-width: 60%;
     margin-top: -12em;
-    margin-left: 9em;
+    margin-left: 13em;
     opacity: 0;
     /* Inicialmente invisível */
     animation: fadeInRight 1s ease-out forwards;
