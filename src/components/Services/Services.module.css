@@ -106,7 +106,8 @@
   }
 
   .cards p {
-    display: none;
+    line-height: 23px;
+    font-size: 16px;
   }
 }
 
