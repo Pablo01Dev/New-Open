@@ -3,18 +3,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background-color: #333;
+  padding: 1.7rem 10rem;
+  background-color: #000000;
   position: fixed;
   width: 100%;
-  top: 0;
+  top: -100%; /* Esconde inicialmente acima da tela */
   left: 0;
   z-index: 1000;
-  box-sizing: border-box; /* Garante que o padding não ultrapasse a largura */
+  box-sizing: border-box;
+  transition: top 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.container.visible {
+  top: 0; /* Mostra o header */
+  opacity: 1;
 }
 
 .logo img {
-  height: 50px;
+  height: 30px;
 }
 
 .navContainer nav {
@@ -33,7 +40,7 @@
 }
 
 .navContainer button:hover {
-  background-color: #555;
+  background-color: #c51639;
   border-radius: 5px;
 }
 
@@ -43,6 +50,11 @@
       flex-direction: column;
       align-items: center;
       padding: 15px;
+      top: -150%; /* Ajuste maior para mobile */
+  }
+
+  .container.visible {
+      top: 0;
   }
 
   .navContainer nav {
@@ -51,6 +63,6 @@
   }
 
   .navContainer button {
-      padding: 8px 12px; /* Ajuste o padding para dispositivos móveis */
+      padding: 8px 12px;
   }
 }

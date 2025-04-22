@@ -3,11 +3,10 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden;
-    padding-top: 8em;
-    padding-bottom: 8em;
+    padding: 8em 0;
     background: rgb(0,0,0);
     background: linear-gradient(352deg, rgba(0,0,0,1) 57%, rgba(130,29,48,1) 100%);
+    overflow: hidden;
 }
 
 .carouselContainer2 {
@@ -16,13 +15,19 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.carousel {
-    display: flex;
-    justify-content: center; /* Centraliza o depoimento */
-    width: 100%;
+.carouselWrapper {
     position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .testimonial {
@@ -30,129 +35,93 @@
     flex-direction: column;
     background-color: #ffffff;
     border-radius: 8px;
-    min-width: 18em;
-    min-height: 12em;
-    padding: 1em;
-    margin: 10px;
-    width: 90%; /* Ajuste a largura para mobile */
-    max-width: 500px; /* Limita a largura máxima */
+    padding: 2em;
+    width: 80%;
+    max-width: 600px;
+    min-height: 250px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    margin: 0 auto;
 }
 
 .person {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
-    text-align: start;
+    text-align: left;
     gap: 1em;
+    margin-bottom: 1em;
 }
 
 .personName {
-    gap: 0px;
-    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
 }
 
 .testimonial h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #333;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .testimonial p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #555;
     line-height: 1.6;
+    text-align: left;
+    margin: 0;
 }
 
 .testimonial span {
-    display: block;
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: #888;
     font-style: italic;
-    margin-top: 0;
 }
 
 .prevButton, .nextButton {
     background: none;
     border: none;
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 2rem;
     cursor: pointer;
     position: absolute;
-    top: 55%;
+    top: 50%;
     transform: translateY(-50%);
     z-index: 100;
-    transition: 0.3s ease;
+    transition: transform 0.3s ease;
+    padding: 10px;
 }
 
 .prevButton {
-    left: 15em; /* Posicionamento relativo */
+    left: 25%;
 }
 
 .nextButton {
-    right: 15em; /* Posicionamento relativo */
+    right: 25%;
 }
 
 .prevButton:hover, .nextButton:hover {
-    color: #ffffff;
+    transform: translateY(-50%) scale(1.2);
 }
 
 @media (max-width: 768px) {
     .testimonial {
-        width: 30%; /* Ajuste para mobile */
-        margin: 4em;
+        width: 90%;
+        padding: 1.5em;
     }
-
+    
     .prevButton, .nextButton {
         font-size: 1.5rem;
-       
     }
-
+    
     .prevButton {
-        left: 20px; /* Ajuste para mobile */
+        left: 2%;
     }
     
     .nextButton {
-        right: 20px; /* Ajuste para mobile */
-    }
-}
-
-/* ... (Seus outros estilos CSS) ... */
-
-/* ... seus outros estilos ... */
-
-.slideIn {
-    animation: slideIn 0.1s ease-in-out forwards;
-}
-
-/* ... seus outros estilos ... */
-
-.fadeIn {
-    animation: fadeInInitial 0.1s ease-in-out forwards;
-}
-
-.fadeOut {
-    animation: fadeOut 0.1s ease-in-out forwards;
-}
-
-@keyframes fadeInInitial {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
+        right: 2%;
     }
 }

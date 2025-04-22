@@ -33,6 +33,7 @@ function Services() {
     return (
         <div
             ref={containerRef}
+            id="services"
             className={`${styles.container} ${isVisible ? styles.fadeIn : ''}`}
         >
             <h1>SERVIÇOS</h1>
@@ -52,11 +53,10 @@ function Services() {
                     <img src={img2} alt="" />
                     <h2>Casamento</h2>
                     <p>
-                        Elevando a experiência do seu casamento a um novo nível de sofisticação.
-                        Seu casamento merece um serviço de coquetelaria que combine com a sua elegância e bom gosto.
-                        Nossa equipe de profissionais cuida de cada detalhe, da seleção dos melhores ingredientes à apresentação impecável dos coquetéis, para que você e seus convidados desfrutem de uma experiência memorável.
-                        Nossa carta de coquetéis, com opções clássicas e autorais,  foi criada para satisfazer os paladares mais exigentes, e nosso atendimento personalizado garante que cada convidado se sinta especial.
-                        Transforme seu casamento em um evento inesquecível com a New Open. Entre em contato e agende uma degustação
+                        Eleve seu casamento com a coquetelaria da New Open.
+                        Ofereça uma experiência elegante e exclusiva, com drinks preparados por profissionais que cuidam de cada detalhe — dos ingredientes à apresentação.
+                        Nossa carta une clássicos e autorais, pensada para surpreender os paladares mais exigentes, com um atendimento que valoriza cada convidado.
+                        Torne seu evento inesquecível. Fale com a gente e agende sua degustação.
                     </p>
                 </div>
                 <div className={styles.service3}>
@@ -64,18 +64,18 @@ function Services() {
                     <h2>Corporativos</h2>
                     <p>
                         Soluções em Coquetelaria para o seu evento corporativo.
-                        Cada evento corporativo é único, e nós entendemos isso.  Com anos de experiência atendendo empresas de diversos setores,  desenvolvemos a expertise para oferecer soluções flexíveis e personalizadas que atendem às suas necessidades, desde coquetéis para recepções a eventos temáticos e confraternizações.
-                        Conte com a expertise da New Open para criar um evento inesquecível para seus clientes, parceiros e colaboradores. Entre em contato e solicite um orçamento
+                        Cada evento corporativo é único, e nós entendemos isso. Com anos de experiência atendendo empresas de diversos setores, temos a expertise para oferecer soluções flexíveis e personalizadas — de recepções a eventos temáticos e confraternizações.
+                        Conte com a New Open para tornar seu evento inesquecível para clientes, parceiros e colaboradores. Fale conosco e solicite um orçamento.
                     </p>
                 </div>
                 <div className={styles.service4}>
                     <img src={img4} alt="" />
                     <h2>Ativação de Marca<br />e Festivais</h2>
                     <p>
-                        Seu evento com a excelência que Ele Merece!
-                        Acreditamos que um serviço de bar impecável faz toda a diferença em um evento.  Por isso,  oferecemos uma equipe de profissionais altamente qualificados,  atendimento personalizado e atenção a cada detalhe para garantir que sua experiência seja perfeita.
-                        De eventos intimistas a grandes festivais,  adaptamos nossos serviços para atender às suas necessidades, criando uma experiência única e impecável para seus convidados.
-                        Entre em contato e vamos juntos planejar uma experiência inesquecível!
+                        Seu evento com a excelência que ele merece!
+                        Acreditamos que um serviço de bar bem executado faz toda a diferença. Por isso, oferecemos uma equipe qualificada, atendimento personalizado e atenção aos detalhes para garantir uma experiência perfeita.
+                        De encontros intimistas a grandes festivais, adaptamos nossos serviços para atender às suas necessidades e encantar seus convidados.
+                        Entre em contato e planeje uma experiência inesquecível com a gente!
                     </p>
                 </div>
             </div>

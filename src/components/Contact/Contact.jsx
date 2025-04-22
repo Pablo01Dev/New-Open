@@ -3,7 +3,7 @@ import styles from './Contact.module.css';
 
 function Contact() {
     return (
-        <div className={styles.contactContainer}>
+        <div className={styles.contactContainer} id="contact">
             <div className={styles.line}></div>
             <div className={styles.text}>
                 <h2>Quer levar drinks incríveis para o seu evento?</h2>

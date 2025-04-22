@@ -8,7 +8,7 @@ function QuemSomos() {
     const pRef = useRef(null);
 
     return (
-        <div className={styles.quemSomosContainer}>
+        <div className={styles.quemSomosContainer}id="quem-somos">
             <div className={styles.text} ref={textRef}>
                 <h2 ref={h2Ref}>
                     Somos a empresa de bar mais presente em festas e eventos!

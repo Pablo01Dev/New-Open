@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from './Depoimento.module.css';
 import { testimonials } from "../../data";
 import { BsPersonCircle } from 'react-icons/bs';
 
 function Depoimento() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isFading, setIsFading] = useState(false);
-    const [hasMounted, setHasMounted] = useState(false);
-    const [slideDirection, setSlideDirection] = useState('right');
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Adicionado estado para verificar se é mobile
-    const testimonialsToShow = isMobile ? 1 : 3; // Determina quantos depoimentos mostrar
+    const [direction, setDirection] = useState(0);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     useEffect(() => {
-        setHasMounted(true);
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
         };
@@ -20,55 +17,80 @@ function Depoimento() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const nextSlide = () => {
-        setSlideDirection('right');
-        setIsFading(true);
-        setTimeout(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-            setIsFading(false);
-        }, 500);
+    const paginate = (newDirection) => {
+        setDirection(newDirection);
+        setCurrentIndex((prev) => 
+            (prev + newDirection + testimonials.length) % testimonials.length
+        );
     };
 
-    const prevSlide = () => {
-        setSlideDirection('left');
-        setIsFading(true);
-        setTimeout(() => {
-            setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
-            setIsFading(false);
-        }, 500);
+    // Variantes de animação
+    const variants = {
+        enter: (direction) => ({
+            x: direction > 0 ? '100%' : '-100%',
+            opacity: 0
+        }),
+        center: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 30
+            }
+        },
+        exit: (direction) => ({
+            x: direction < 0 ? '100%' : '-100%',
+            opacity: 0,
+            transition: {
+                duration: 0.2
+            }
+        })
     };
-
-    const currentTestimonials = Array.from({ length: testimonialsToShow }, (_, i) =>
-        testimonials[(currentIndex + i) % testimonials.length]
-    );
 
     return (
         <div className={styles.carouselContainer}>
             <div className={styles.carouselContainer2}>
                 <h1>DEPOIMENTOS</h1>
-                <button className={styles.prevButton} onClick={prevSlide}><i className="bi bi-caret-left"></i></button>
-                <div className={styles.carousel}>
-                    {currentTestimonials.map((testimonial, index) => (
-                        <div
-                            key={testimonial.id}
-                            className={`${styles.testimonial} ${isFading ? styles.fadeOut : (hasMounted && !isFading ? styles.fadeIn : '')}`}
-                            style={{
-                                transform: isFading ? (slideDirection === 'right' ? 'translateX(-5%)' : 'translateX(5%)') : 'translateX(0%)',
-                                width: isMobile ? '95%' : `${100 / testimonialsToShow}%` // Ajuste de largura
-                            }}
+                
+                <button 
+                    className={styles.prevButton} 
+                    onClick={() => paginate(-1)}
+                    aria-label="Depoimento anterior"
+                >
+                    <i className="bi bi-caret-left"></i>
+                </button>
+
+                <div className={styles.carouselWrapper}>
+                    <AnimatePresence custom={direction} initial={false}>
+                        <motion.div
+                            key={currentIndex}
+                            custom={direction}
+                            variants={variants}
+                            initial="enter"
+                            animate="center"
+                            exit="exit"
+                            className={styles.testimonial}
                         >
                             <div className={styles.person}>
                                 <BsPersonCircle style={{ fontSize: '25px', color: 'gray', marginTop: '.7em' }} />
                                 <div className={styles.personName}>
-                                    <h2>{testimonial.nome}</h2>
-                                    <span>{testimonial.evento}</span>
+                                    <h2>{testimonials[currentIndex].nome}</h2>
+                                    <span>{testimonials[currentIndex].evento}</span>
                                 </div>
                             </div>
-                            <p>{testimonial.depoimento}</p>
-                        </div>
-                    ))}
+                            <p>{testimonials[currentIndex].depoimento}</p>
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
-                <button className={styles.nextButton} onClick={nextSlide}><i className="bi bi-caret-right"></i></button>
+
+                <button 
+                    className={styles.nextButton} 
+                    onClick={() => paginate(1)}
+                    aria-label="Próximo depoimento"
+                >
+                    <i className="bi bi-caret-right"></i>
+                </button>
             </div>
         </div>
     );

@@ -4,7 +4,7 @@ import styles from './Social.module.css';
 
 function Social() {
     return (
-        <div className={styles.Container}>
+        <div className={styles.Container} id="social">
             <div className={styles.socialContainer}>
                 <div className={styles.text}>
                     <p>

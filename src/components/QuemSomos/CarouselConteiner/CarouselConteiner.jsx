@@ -12,7 +12,7 @@ function shuffleArray(array) {
   return newArray;
 }
 
-const AutoCarousel = memo(({ images, delay = 3000 }) => {
+const AutoCarousel = memo(({ images, delay = 3000, className = "" }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = useCallback(() => {
@@ -30,12 +30,9 @@ const AutoCarousel = memo(({ images, delay = 3000 }) => {
   }
 
   return (
-    <div className={styles.carousel}>
+    <div className={`${styles.carousel} ${className}`}>
       {images.map((img, index) => (
-        <div
-          key={index}
-          className={styles.carouselImageContainer}
-        >
+        <div key={index} className={styles.carouselImageContainer}>
           <img
             src={img.image}
             alt={img.title}
@@ -92,7 +89,11 @@ function CarouselConteiner() {
       </div>
 
       <div className={styles.carouselItemCenter} ref={centerColumnRef}>
-        <AutoCarousel images={carouselImages[2]} delay={4000} />
+        <AutoCarousel
+          images={carouselImages[2]}
+          delay={4000}
+          className={styles.carouselCenter}
+        />
       </div>
 
       <div className={styles.rightColumn} ref={rightColumnRef}>
