@@ -5,7 +5,7 @@
   import DrinksCarousel from './components/Drinks/DrinksCarousel';
   import Contact from './components/Contact/Contact';
   import Footer from './components/Footer/Footer';
-  import Services from './components/Services/services';
+  import Services from './components/Services/Services';
 
   import './App.css';
 
