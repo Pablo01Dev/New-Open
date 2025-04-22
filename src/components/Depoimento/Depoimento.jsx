@@ -73,7 +73,7 @@ function Depoimento() {
                             className={styles.testimonial}
                         >
                             <div className={styles.person}>
-                                <BsPersonCircle style={{ fontSize: '25px', color: 'gray', marginTop: '.7em' }} />
+                                <BsPersonCircle style={{ fontSize: '25px', color: 'gray' }} />
                                 <div className={styles.personName}>
                                     <h2>{testimonials[currentIndex].nome}</h2>
                                     <span>{testimonials[currentIndex].evento}</span>
